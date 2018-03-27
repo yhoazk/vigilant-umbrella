@@ -26,6 +26,8 @@ Cargo is a package and dependency manager for Rust, similar to `pip` for python.
 This tool does the following things for you:
   * Makes a tidy folder structure and some templates for your project
     * `cargo new <name>`
+    * If we are to build an executable pass to cargo the option `--bin`
+      * `cargo new <name> --bin`
   * Comiles the code by using the command:
     * `cargo build` inside the project
   * runs the project by using:
@@ -36,12 +38,28 @@ This tool does the following things for you:
   the command:
     * `cargo update`
 
+### cargo files:
+#### `Cargo.toml`
+Is the configuration file or manifest of the project, contains all the metadata
+that cargo needs to compile the project. This file follows the [TOML](https://github.com/toml-lang/toml) format
+
+This files is editable, so other sections can be added. For example the name of
+the binary:
+```
+[[bin]]
+name = "<binary>"
+```
+
 
 ## [Zinc]( http://zinc.rs/)
 
 Zinc is a baremetal stack for running Rust in embedded environments, at this
 moment only ARM is supported.
 
+
+## Variables and types:
+
+TODO:
 
 ## Notes
 
@@ -60,4 +78,3 @@ moment only ARM is supported.
 - Rust does not have classes.
 - Rust is not whitespace sensitive.
 - Rust also uses `;` to indicate end of statement.
--
