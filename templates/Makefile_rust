@@ -1,0 +1,12 @@
+RUST_APP=
+
+all: clean comp run
+
+clean:
+	rm -rf ./${RUST_APP}.exe
+
+comp:
+	rustc ${RUST_APP}.rs -o ${RUST_APP}.exe
+
+run:
+	./${RUST_APP}.exe

@@ -1,8 +1,8 @@
 
-
+.cargo-lock
 Cargo.lock
 *.exe
-/target/
+**/target/*
 **/*.rs.bk
 *.a
 *.o
