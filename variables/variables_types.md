@@ -159,7 +159,7 @@ a pair of `{}`.
 ```rust
 fn main() {
     let outer = 42;
-    {
+    { // Brackets create a new scope, aka code block
         let inner = 3.14;
         println!("Block var: {}", inner);
         let outer = 99; //shadows the first outer var
@@ -172,4 +172,54 @@ fn main() {
 
 ## Type checking and conversions
 
-P46
+Rust checks the type of the variables at compile time. This means that we
+cannot change the type of a variable during its lifetime because of static 
+typing.
+
+```rust
+fn main()
+{
+    let foo: i32 = 100;
+    foo = "bar"; // Error: mismatched types: expected int found &static str
+    /* However is possible to do the following */
+    let foo = "bar"; // This will create a new variable the old foo will be
+                     // deleted
+
+}
+```
+
+### Casting
+
+Rust warns about every change of type with compiler warnings. But if it's
+intended Rust provides the operator `as`.
+
+```rust
+let pts = 10i32;
+let mut other_pts: u32 = 0;
+other_pts = pts as u32;
+```
+
+The operator `as`:
+* truncates floats to only the integer part
+* Strings cannot be converted to integers
+
+### Aliasing
+
+This has the same purpose as the `typedef` in C. It assigns a new name to
+a known type.
+
+```rust
+type uint_16 = u16;
+
+fn main {
+    let my_int: uint_16 = 943;
+}
+```
+
+### Expressions
+
+#### Expressions and statements
+
+What is an expression?:
+
+What is an statement?:
