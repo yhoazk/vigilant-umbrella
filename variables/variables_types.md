@@ -217,9 +217,32 @@ fn main {
 ```
 
 ### Expressions
-
+Rust is an expression-oriented language. 
 #### Expressions and statements
-
+https://doc.rust-lang.org/reference/statements-and-expressions.html
 What is an expression?:
 
+> An Expression is a combination of one or more explicit values, constants,
+> variables, operations and fuctions that the programming language interprets
+> and computes to produce another value.
+
+Every part of the code that returns a value,
+
+Examples of expressions:
+```rust
+9*9
+sumOf(1,2,3)
+```
+
+These are not expressions:
+
+```rust
+let y = 10i32;
+type ff = f32;
+```
+
 What is an statement?:
+> statement is the smallest standalone element of an imperative programming
+> language that expresses an action to be carried out.
+
+Declarations are statements,
