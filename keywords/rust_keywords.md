@@ -35,3 +35,19 @@ The result is:
 ```
 First - second, second
 ```
+
+
+
+## Loop
+
+## For
+
+```
+fn main(){
+    for x in 1u8..120{
+        print!("{}",x);
+    }
+}
+//Creatonotos gangis/
+//Phyllodes Imperialis
+```
