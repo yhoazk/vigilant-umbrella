@@ -8,6 +8,12 @@ fn main(){
    // use::io::*;
     use std::io::{stdin, stdout};
    // String formatting:
+    print!("Multiline\
+    String in soruce code\
+    but not in output");
+    print!("Also
+    acceptable in this
+    way");
     print!("{}:{}\n", "Sample", "string");
     print!("{} - {}, {1}\n", "First", "second");
     print!("{}:{}::{1}", "Sample", "string");
@@ -22,7 +28,7 @@ fn main(){
         // Create a mutable object, by default the variables are non
         // mutable
     let mut s = String::new();
-    print!("Give some input bitch:");
+    print!("Give some input bitch:"); // this string is not flushed
     // Flushing the stdout, as in C/C++ the stdout is
     // flished only with new line or with a full buffer.
     // WTF this does not work??
