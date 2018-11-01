@@ -6,4 +6,8 @@ fn main() { // fn indicates a function declaration, and by convention the brace 
 
   println!("wilcom"); // The ! indicates that is a macro, not a function
   println!("Value of pi {}", PI);
+
+  for n in 5..45 {
+      print("{}\n", x);
+  }
 }
