@@ -14,7 +14,7 @@ General option:
 * `-O`: Produces a native code that is optimized for execution speed. Equivalent
   to the option `rustc -C opt-level=2`; The most optimized code is generated with
   `rustc -C opt-level=3`
-* ``
+* `-g`: Adds the debug information to the executable. `rust-gdb` needs to be installed to be able to use that informaiton.
 
 
 ## Debug Rust progams
@@ -38,7 +38,8 @@ This tool does the following things for you:
   the command:
     * `cargo update`
 
-### cargo files:
+### cargo files
+
 #### `Cargo.toml`
 Is the configuration file or manifest of the project, contains all the metadata
 that cargo needs to compile the project. This file follows the [TOML](https://github.com/toml-lang/toml) format
@@ -56,10 +57,25 @@ name = "<binary>"
 Zinc is a baremetal stack for running Rust in embedded environments, at this
 moment only ARM is supported.
 
+## The `let` statement
 
-## Variables and types:
+#### Syntax
 
-TODO:
+```rust
+let [mut] x[:t] = e;
+```
+
+* `t` specifies the type; often can be inferred if missing.
+* `x` is immutable unless `mut` is present
+* if `t` is present then `e:t` is required
+* `x`:`t` is assummed in rest of scope, immutability is enforced.
+* Assiging to a variable only allowed if `mut` is present.
+
+##### Conditional initialization
+
+```rust
+let num = if cont {5} else {5}
+```
 
 ## Notes
 
