@@ -1,12 +1,10 @@
 # vigilant-umbrella
 Rust
 
-
 ## Install Rust
 
-
 ## Compile rust progams
-The rustc command has the following format: `rustc [options] input`
+The `rustc` command has the following format: `rustc [options] input`
 
 General option:
 * `-o <name>`: By default the executable is created with the same name as the
@@ -28,6 +26,7 @@ This tool does the following things for you:
     * `cargo new <name>`
     * If we are to build an executable pass to cargo the option `--bin`
       * `cargo new <name> --bin`
+    * Or the flag `--lib` if its a library
   * Comiles the code by using the command:
     * `cargo build` inside the project
   * runs the project by using:
@@ -40,7 +39,7 @@ This tool does the following things for you:
 
 ### cargo files
 
-#### `Cargo.toml`
+#### `Cargo.toml` a.k.a. manifest
 Is the configuration file or manifest of the project, contains all the metadata
 that cargo needs to compile the project. This file follows the [TOML](https://github.com/toml-lang/toml) format
 
