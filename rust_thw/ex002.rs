@@ -8,13 +8,14 @@ use std::fmt;
     multiline comment.*/
 
 // Start the main function.
-fn main() {
-    let distance = 100i8; // assign the 8 bit signed integer 100 to the immutable variable distance.
+fn main()
+{
+    //let distance = 100i8; // assign the 8 bit signed integer 100 to the immutable variable distance.
 
     // this is a single line comment
 
     // println! is a macro. that prints the formated string to stdout
-    println!("You are {} miles away.", distance);
+    //println!("You are {} miles away.", distance);
 
     // Notice that unlike C we do not return some int from the main function.
     // Main's return type is '()' read as "unit" which as we shall see is a much

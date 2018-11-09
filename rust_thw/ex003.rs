@@ -11,8 +11,7 @@ fn main(){
     let height = 72i8;
 
     // You can skip annotating the literal if you give an explicit type
-    let shoe_size : i8 = 12;
-
+    let mut shoe_size : i8 = 12;
     println!("I am {} years old.", age);
     println!("I am {} inches tall.", height);
     println!("I wear a size {} shoe.", shoe_size);
@@ -22,15 +21,17 @@ fn main(){
     // TODO: Uncomment the following three lines and compile
     // Be warned this will emit a compiler warning.
 
-    // let mut european_shoe_size = 42i8;
-    // european_shoe_size = 46i8;
-    // println!("I wear a size {} shoe in Europe.", european_shoe_size);
+    let mut european_shoe_size;
+    european_shoe_size = 46i8;
+    println!("I wear a size {} shoe in Europe.", european_shoe_size);
 }
 
 // Questions and Exercises:
 // 1.) Are the semicolons necessary?
+    // Yes
 // 2.) What happens when you replace the '{}' with '{:k}'?
 // 3.) What happens when you try to reassign a variable not declared mutable?
+    // Compile time error: reassignment of immutable variable
 // 4.) Get the compiler to compile the mutable variable reassignment code without a
 //     compiler warning.
 // 5.) Go line by line and write down anything you don't understand and what about it

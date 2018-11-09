@@ -31,6 +31,9 @@ fn main() {
     // 100000000i vs 100_000_000i
     let bigger_distance = 100_000_000i64;
     println!("You are {} miles away.", bigger_distance);
+    println!("You are {:b} miles away Binary.", bigger_distance);
+    println!("You are {:x} miles away hex.", bigger_distance);
+    println!("You are {:o} miles away octal.", bigger_distance);
 
     // The literal for floats is a number followed by an 'f32' meaning a float that
     // uses 32 bits to represent the number.
