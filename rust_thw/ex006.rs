@@ -4,7 +4,7 @@ fn main() {
     // this is the syntax for an array literal. Arrays are arrays in the traditional
     // sense. They are of a fixed size. If you want to have a "growable" array use
     // vector. We will explore vectors later on.
-    let areas = [10i8, 12i8, 13i8, 14i8, 20i8];
+    let mut areas = [10i8, 12i8, 13i8, 14i8, 20i8];
 
     // An array's type signature looks like the following.
     // Notice the explicit mention of the length.
@@ -40,7 +40,10 @@ fn main() {
     println!("The number of ints in areas: {}", areas.len());
 
     // Array access mimics most traditional languages.
-    println!("The first area is {}, the 2nd {}.", areas[0], areas[1]);
+    areas[0] = 257; // compiles with warning and stores the overflow reminder. In this case 1 
+    println!(" pp The first area is {}, the 2nd {}.", areas[0], areas[1]);
+    // This compiles, with a warning and crashes at run time
+    //println!("The first area is {}, the 7nd {}.", areas[0], areas[7]);
 
     println!("The size of a char: {}", std::mem::size_of::<char>());
     println!("The size of name: {}", std::mem::size_of_val(&name));
@@ -53,3 +56,4 @@ fn main() {
 //      research on why you get what you get.
 // 2.) Try assigning to elements in the areas array with 'areas[0] = 100;'. What happens?
 // 3.) Trying assigning an element to area that is not an i8.
+    // Thereminder is assigned. A compilation warning is given

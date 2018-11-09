@@ -1,14 +1,19 @@
+use std::env;
+
 fn main() {
     let args = std::env::args();
     let args_size = args.len();
-
+    let inArgs: Vec<String> = env::args().collect();
+    //let max  = inArgs[1]; // .parse::<i32>().unwrap(); // turbo fish operator
     // Another way to iterate is by using a while loop. In the following cases,
     // the while loop is much easier to screw up than a for loop and is arguably
     // hard to read and understand. In general prefer for loops over while loops
     // unless there's a good reason to use them.
+
+    //println!("in Arg: {}", max);
     let mut i = 0;
     while i < args_size {
-        println!("arg {}: {}", i, args[i]);
+        println!("arg {}: {}", i, i/*args[i]*/);
         i = i + 1;
     }
 
@@ -24,12 +29,15 @@ fn main() {
 
     // If you need to loop forever, you can of course do 'while true' but Rust provides
     // the more intention revealing shortcut: loop.
-    // println!("Let's do some counting.")
-    // i = 0;
-    // loop {
-    //     println!("{}", i);
-    //     i = i + 1;
-    // }
+    println!("Let's do some counting.");
+    i = 0;
+    loop {
+        println!("{}", i);
+        i = i + 1;
+        if (i > 20 /*max*/){
+            break;
+        }
+    }
 }
 
 // Questions and Exercises:

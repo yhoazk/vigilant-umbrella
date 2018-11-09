@@ -25,7 +25,7 @@ fn main() {
     // This function gives us a vector of command line arguments
     // Remember all we know (and need to know for now) are that vectors are
     // just like arrays but are growable.
-    let args = std::env::args();
+   // let args = std::env::args();
 
     for arg in std::env::args() {
         println!("arg {}", arg);
@@ -38,4 +38,4 @@ fn main() {
 // 1.) See if you can assign an element from the states array to the argv vector
 //     before printing both. Try the inverse.
 // 2.) Why do I take a slice of args (skipping the 0th element)? Try removing that
-//     and rerunning.
+//     and rerunning. ???

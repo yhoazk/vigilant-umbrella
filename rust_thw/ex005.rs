@@ -26,6 +26,7 @@ fn main() {
 // Questions and Exercises:
 // 1.) Multiple the number you assign to universe_of_defects various times until it
 //     reaches a size bigger than a 32 int can hold.
+// Produces warinig at compile time: attempt to multiply with overflow
 // 2.) Change universe_of_defects to use 64 bit ints (i64) and unsigned 32 and
 //     64 bit ints (u32, u64). How does this affect how big universe_of_defects
 //     can go?
