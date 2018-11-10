@@ -1,9 +1,9 @@
-use std::os;
+use std::env;
 
 fn main() {
     // argv and argc are traditional names used in C and C++ for command line
     // arguments and number of command line arguments respectively
-    let argv = os::args();
+    let argv = env::args_os();
     let argc = argv.len();
 
     if argc != 2 {
@@ -13,7 +13,7 @@ fn main() {
     }
 
     // get the second command line argument as a slice
-    let argument = &argv[1][];
+    let argument = &argv[1];
     // ** IMPORTANT **
     // We must take access the second element from the Vector as a slice because of
     // the concept of ownership in Rust. Variables in Rust are in charge of freeing

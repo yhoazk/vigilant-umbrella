@@ -76,6 +76,45 @@ let [mut] x[:t] = e;
 let num = if cont {5} else {5}
 ```
 
+## Ownership  
+
+All programs have to manage the resources they require. Some use garbage
+collectors which constantly looks for no longer used memory, this at run time;
+others the programmer must explicitly allocate and free the memory.
+Rust manages memory with a system of ownership which are checked at compile
+time. None of the ownership rules affect the runtime of the program as the GC
+does.
+
+### The heap and the stack
+
+Rust as a systems programming language whether a value is stored on the stack or
+in heap has a greater impact on how the program behaves. Here are some notes on
+the aspects relevant to stacks and heaps.
+
+  * Stacks are faster as the data is known at compile time and has known size
+  * The TOS (Top of stack) is always known
+  * Data with a size unknown at compile time or a size that might change can be
+  stored in the heap instead.
+  * The heap is less organized
+  * The OS has to find a space large enough for the requested data and return
+  a ptr to it
+  * Pushing values onto the stack is not considered as allocating, because the 
+  pointer is already known, fixed size
+  * Accessing data in the heap is slower than accessing data on the stack
+  because a pointer has to be followed
+
+### Ownership rules
+
+* Each value has a variable that's called its owner
+* There can be only one owner at a time
+* When the owner goes out of scope, the value will be dropped
+
+When the owner of a memory chunk goes out of scope, rusts calls a special
+function called `drop`. Rust calls `drop` automatically at the closing curly
+bracket.
+
+> This is similar to the RAII pattern in C++
+
 ## Notes
 
 - Rust does not perform garbage collection

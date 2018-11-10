@@ -17,7 +17,7 @@ fn main() {
         i = i + 1;
     }
 
-    let states = ["California", "Oregon", "Washington", "Texas"];
+    let mut states = ["California", "Oregon", "Washington", "Texas"];
 
     let num_states = states.len();
     let mut i = 0;
@@ -31,12 +31,23 @@ fn main() {
     // the more intention revealing shortcut: loop.
     println!("Let's do some counting.");
     i = 0;
+    while i < states.len() {
+        println!("{}", states[i]);
+        states[i] = &inArgs[i];
+        i += 1;
+    }
     loop {
         println!("{}", i);
-        i = i + 1;
-        if (i > 20 /*max*/){
+        i = i + 1; // i++ doesn't work
+        if i > 20 /*max*/{
             break;
         }
+    }
+    i = 0;
+    println!("States len; {}", states.len());
+    while i < states.len() {
+        println!("{}", states[i]);
+        i +=1;
     }
 }
 
@@ -51,3 +62,8 @@ fn main() {
 //     it won't put them all into states.
 // 6.) Research if you've really copied these strings. The answer may surprise and
 //     confuse you though.
+
+// https://www.topcoder.com/community/competitive-programming/tutorials/introduction-to-string-searching-algorithms/
+//https://wiki.gnuradio.org/index.php/SuggestedReading
+//http://www.csit-sun.pub.ro/courses/Masterat/
+//http://archibold.io/

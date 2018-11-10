@@ -1,21 +1,22 @@
 // http://c.learncodethehardway.org/book/ex12.html
 
 // use allows us to refer to methods without using their fully qualified names
-// std::os contains the args() function
-use std::os;
+// std::os contains the args() function. Not loger valid
+use std::env;
 
 fn main() {
-    let argv = os::args();
+    let argv = env::args(); // Is this a copy? a reference? 
     let argc = argv.len();
 
     //  == checks for equality
-    if argc == 1 {
+    if argc == 1 { println!("No args"); return;}
+    if argc == 2 {
         println!("You only have one argument. You suck.");
         // && is the logical and operator
-    } else if argc > 1 && argc < 4  {
+    } else if argc > 1 || argc < 4  {
         println!("Here are your arguments:");
 
-        for arg in argv.iter() {
+        for arg in argv {
             print!("{} ", arg);
         }
         println!("");
