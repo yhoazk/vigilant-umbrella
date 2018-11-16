@@ -1,4 +1,9 @@
 
+
+
+fn format_me(s: &str, s2: &str)-> String{
+    return String::from(s).push_str(s2);
+}
 /* String demo:
     As in C/C++ non-constant strings are allocated in stack
     in this case the string is with autmoatic storage.
@@ -10,5 +15,6 @@ fn main() {
         s.push_str("Second part");
         println!("{}",s);
     }
-    println!("{}",s); // Error s does not exists
+    println!("{}", format_me("ee", "xx"));
+    //println!("{}",s); // Error s does not exists 
 }

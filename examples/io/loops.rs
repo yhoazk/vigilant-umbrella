@@ -1,10 +1,17 @@
 
+// Gobal constants
+//  They don't change during the life of the program
+//  type has to be indicated 
+static MAX_VAL: i32 = 20;
+// as in C, & indicates a reference
+static BIN_NAME: &str = "Loops";
 
-
-
+/// Mark down comments have 3 /s
 fn main(){
     // for <var> in <init>..<endrange>
-    for x in 1u8..20{
+    // The ranges have to have the same tipe
+    println!("{}", BIN_NAME);
+    for x in 1i32..MAX_VAL{
         print!("{}::",x);
         if x == 15 {
            break; // 99; // Break may take an expression argument
@@ -41,6 +48,10 @@ fn main(){
     // normally breaks the closest loop, but in rust 
     // is possible to specify the loop that we want to 
     // break
+    // named print arguments 
+    let first: &str = "first";
+    let sec: &str = "Sec";
+    println!("Named Arguments Second: {sec} first {first}, again sec{sec}", first=first, sec=sec);
     'outer: loop{
         println!("Outer lup");
         'inner: loop{
