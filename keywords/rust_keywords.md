@@ -5,14 +5,11 @@
 This declares a function. Like in C, a program needs an entry 
 point, as is C is a function called `main`. It may be a library.
 
-
-
-
 ## IO
 
 ### Printing to stdout
 
-```
+```rs
 print!("String");
 ```
 
@@ -26,7 +23,7 @@ strings given as parameters for the print macro.
 The input arguments are given as a zero based list of strings.
 And the placeholders can be numbered to replace the string with 
 an instance of that list. For example:
-```
+```rs
 fn main(){
     print!("{} - {}, {1}\n", "First", "second");
 }
@@ -42,7 +39,7 @@ First - second, second
 
 ## For
 
-```
+```rs
 fn main(){
     for x in 1u8..120{
         print!("{}",x);

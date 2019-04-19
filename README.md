@@ -3,6 +3,37 @@ Rust
 
 ## Install Rust
 
+Use the **rustup** tool chain:
+
+```sh
+curl https://sh.rustup.rs -sSf | sh
+```
+
+By default installs the stable version of the rust compiler, its package
+manager and the language std library documentation locally. The installation
+is placed by default under `~/.cargo` also updates the `PATH` variable.
+
+To update the rust tool chain:
+```sh
+rustup update
+rustup self update
+```
+
+## Install tools
+
+```sh
+cargo install racer && cargo install rustfmt && cargo install rustsym
+```
+
+### `racer`
+
+
+
+### `rustfmt`
+
+### `rustsym`
+
+
 ## Compile rust progams
 The `rustc` command has the following format: `rustc [options] input`
 
