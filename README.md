@@ -163,3 +163,8 @@ bracket.
 - Rust does not have classes.
 - Rust is not whitespace sensitive.
 - Rust also uses `;` to indicate end of statement.
+
+
+### Prelude
+https://doc.rust-lang.org/std/prelude/index.html
+
